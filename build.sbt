@@ -12,9 +12,8 @@ fork in run := true
 
 // additional libraries
 libraryDependencies ++= Seq(
-                             "org.apache.spark" %% "spark-core" % "1.3.1",
-                             "org.apache.spark" %% "spark-streaming" % "1.3.1" % "provided",
-                             "org.scala-lang" % "scala-reflect" % "2.10.4",
+                             "org.apache.spark" %% "spark-core" % "1.3.1" % "provided",
+                             "org.apache.spark" %% "spark-streaming" % "1.3.1" % "provided",                             
                              "org.apache.spark" %% "spark-catalyst" % "1.3.1" % "provided",
                              "org.apache.spark" %% "spark-mllib" % "1.3.1" % "provided",
                              "org.apache.spark" %% "spark-streaming-twitter" % "1.3.1",
