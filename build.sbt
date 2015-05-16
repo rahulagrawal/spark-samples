@@ -12,7 +12,7 @@ fork in run := true
 
 // additional libraries
 libraryDependencies ++= Seq(
-                             "org.apache.spark" %% "spark-core" % "1.3.1" % "provided",
+                             "org.apache.spark" %% "spark-core" % "1.3.1",
                              "org.apache.spark" %% "spark-streaming" % "1.3.1" % "provided",
                              "org.scala-lang" % "scala-reflect" % "2.10.4",
                              "org.apache.spark" %% "spark-catalyst" % "1.3.1" % "provided",
@@ -39,7 +39,7 @@ resolvers ++= Seq(
                    Resolver.sonatypeRepo("public")
                  )
 
-assemblyOption in assembly := (assemblyOption in assembly).value.copy(includeScala = false, includeDependency = true)
+assemblyOption in assembly := (assemblyOption in assembly).value.copy(includeScala = false, includeDependency = false)
 
 assemblyMergeStrategy in assembly := {
   case m if m.toLowerCase.endsWith("manifest.mf") => MergeStrategy.discard
@@ -51,4 +51,6 @@ assemblyMergeStrategy in assembly := {
   case "reference.conf" => MergeStrategy.concat
   case _ => MergeStrategy.first
 }
+
+assemblyJarName in assembly := "spark-samples.jar"
 
