@@ -1,3 +1,5 @@
+import FilterKeys._
+
 name := "Spark-samples"
 
 version := "1.0.0"
@@ -8,6 +10,8 @@ javacOptions ++= Seq("-source", "1.7", "-target", "1.7")
 
 
 fork in run := true
+
+seq(filterSettings : _*)
 
 
 // additional libraries
@@ -52,4 +56,6 @@ assemblyMergeStrategy in assembly := {
 }
 
 assemblyJarName in assembly := "spark-samples.jar"
+
+
 
