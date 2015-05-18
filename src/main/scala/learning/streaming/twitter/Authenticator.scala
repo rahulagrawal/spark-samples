@@ -1,4 +1,4 @@
-package streaming.twitter
+package learning.streaming.twitter
 
 import org.apache.spark.Logging
 

@@ -1,4 +1,4 @@
-package streaming
+package learning.streaming
 
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.Logging
@@ -10,7 +10,7 @@ import org.apache.spark.Logging
  */
 object LogUtil extends Logging {
 
-  /** Set reasonable logging levels for streaming if the user has not configured log4j. */
+  /** Set reasonable logging levels for learning.streaming if the user has not configured log4j. */
   def setStreamingLogLevels() {
     val log4jInitialized = Logger.getRootLogger.getAllAppenders.hasMoreElements
     if (!log4jInitialized) {
