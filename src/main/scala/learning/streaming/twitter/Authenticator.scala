@@ -9,6 +9,7 @@ import scala.io.Source
  * @author Rahul Agrawal
  *         Date: 5/16/2015
  */
+@deprecated
 object Authenticator extends Logging {
 
   val propertiesFile: String = "/twitter.properties"
