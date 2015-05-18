@@ -14,11 +14,13 @@ object Authenticator extends Logging {
   val propertiesFile: String = "/twitter.properties"
 
 
-  def main(args: Array[String]) {
+  def main(args: Array[String]): Unit = {
+    init()
+  }
 
+  def init() = {
     val properties = getAuthPropertiesFromFile()
     setAuthProperties(properties)
-
   }
 
   private def foo(s: String): (String, String) = {
@@ -39,23 +41,4 @@ object Authenticator extends Logging {
                         System.setProperty(key, value)
                     }
   }
-
-
-  /** Configures the Oauth Credentials for accessing Twitter */
-  /*def configureTwitterCredentials(apiKey: String, apiSecret: String, accessToken: String, accessTokenSecret: String) {
-    val configs = new mutable.HashMap[String, String] ++= Seq("apiKey" -> apiKey,
-                                                              "apiSecret" -> apiSecret,
-                                                              "accessToken" -> accessToken,
-                                                              "accessTokenSecret" -> accessTokenSecret)
-    configs.foreach { case (key, value) =>
-      if (value.trim.isEmpty) {
-        throw new Exception("Error setting authentication - value for " + key + " not set")
-      }
-      val fullKey = "twitter4j.oauth." + key.replace("api", "consumer")
-      System.setProperty(fullKey, value.trim)
-      println("\tSystem Property " + fullKey + " set as [" + value.trim + "]")
-                    }
-    println()
-  }*/
-
 }
