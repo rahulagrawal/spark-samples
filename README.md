@@ -9,6 +9,7 @@ accessToken=***************************
 accessTokenSecret=***************************
 
 OR
+
 Environment Variables to be set are
 
 $ export twitter4j.oauth.consumerKey=*********************
