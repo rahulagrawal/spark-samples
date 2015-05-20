@@ -1,6 +1,14 @@
 ### spark-samples
 
+
+##### Setup of Twitter authentication
 ```
+https://apps.twitter.com/
+
+https://databricks-training.s3.amazonaws.com/realtime-processing-with-spark-streaming.html
+
+```
+
 System properties to be set are
 
 apiKey=*****************
