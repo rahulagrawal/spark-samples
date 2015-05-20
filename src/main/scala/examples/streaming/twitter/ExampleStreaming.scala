@@ -25,7 +25,7 @@ object ExampleStreaming extends Logging {
 
     val statuses = tweets.map(status => status.getText) // entire message
     statuses.foreachRDD(x => logInfo(x.toDebugString))
-    statuses.print()
+    //statuses.print()
 
     val words = statuses.flatMap(status => status.split(" "))
     val hashtags = words.filter(word => word.startsWith("#"))
