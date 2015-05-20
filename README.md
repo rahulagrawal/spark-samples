@@ -5,12 +5,12 @@
 ```
 https://apps.twitter.com/
 
-https://databricks-training.s3.amazonaws.com/realtime-processing-with-spark-streaming.html
+https://databricks-training.s3.amazonaws.com/realtime-processing-with-spark-streaming.html   
 
 ```
+##### System properties to be set are
 
-System properties to be set are
-
+```
 apiKey=*****************
 apiSecret=*************************
 accessToken=***************************
