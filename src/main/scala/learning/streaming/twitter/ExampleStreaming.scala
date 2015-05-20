@@ -21,8 +21,6 @@ object ExampleStreaming extends Logging {
     val sparkConf = SparkUtil.getSparkConf("twitter-example", runLocal)
     val streamingContext = new StreamingContext(sparkConf, Seconds(5))
 
-    Authenticator.init()
-
     val tweets = TwitterUtils.createStream(streamingContext, None)
 
     val statuses = tweets.map(status => status.getText) // entire message
