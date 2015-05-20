@@ -1,4 +1,4 @@
-package learning
+package examples
 
 import org.apache.spark.SparkConf
 

@@ -1,6 +1,6 @@
-package learning.streaming.twitter
+package examples.streaming.twitter
 
-import learning.SparkUtil
+import examples.SparkUtil
 import org.apache.spark.Logging
 import org.apache.spark.streaming.twitter.TwitterUtils
 import org.apache.spark.streaming.{Seconds, StreamingContext}
