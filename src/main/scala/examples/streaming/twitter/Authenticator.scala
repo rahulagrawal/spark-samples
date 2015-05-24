@@ -24,14 +24,14 @@ object Authenticator extends Logging {
     setAuthProperties(properties)
   }
 
-  private def foo(s: String): (String, String) = {
-    val pair: Array[String] = s.split("=")
-    (pair(0), pair(1))
+  val function1 = (x: String) => {
+    val keyValue = x.split("=")
+    (keyValue(0), keyValue(1))
   }
 
   def getAuthPropertiesFromFile(): Map[String, String] = {
     val lines = Source.fromURL(getClass.getResource(propertiesFile)).getLines()
-    val keyValue = lines.filter(line => line.split("=").size == 2).map(x => foo(x))
+    val keyValue = lines.filter(line => line.split("=").size == 2).map(function1(_))
     keyValue.toMap
   }
 
