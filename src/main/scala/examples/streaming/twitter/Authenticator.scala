@@ -35,11 +35,11 @@ object Authenticator extends Logging {
     keyValue.toMap
   }
 
-  def setAuthProperties(propMap: Map[String, String]) = {
-    propMap.foreach {
-                      case (key, value) =>
-                        logInfo(s"Key=$key : value=$value")
-                        System.setProperty(key, value)
-                    }
+  def setAuthProperties(keyValues: Map[String, String]) = {
+    keyValues.foreach {
+                        case (key, value) =>
+                          logInfo(s"Key=$key : value=$value")
+                          System.setProperty(key, value)
+                      }
   }
 }
